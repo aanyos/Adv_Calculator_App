@@ -1,0 +1,55 @@
+<html>
+<head>
+<style>
+    body{
+            text-align: 'center';
+            margin-top: 50px;
+            font-size: 20;
+            background-color: lightblue
+    }
+
+    h1{
+        color: black;
+    }
+
+    h4, h5{
+        color: red;
+        background-color: yellow;
+    }
+
+    input[type="submit"]{
+        color: white;
+        background-color: darkblue;
+        margin: 2px;
+    }
+
+    footer{
+        margin-top: -50px;
+    }
+</style>
+</head>
+
+<!--##NO predefine-->
+<body>
+    <h1>Advance Calculator!</h1>  <br>
+    <img width="20%" height="20%" src="{{url_for('static', filename='img.png') }} " />
+    <br><br>
+    <form method="POST">
+        <label >Enter expression</label><br><br>
+        <select class="is-focused is-large" name="operation" aria-label="operationDropdown">
+            <option>Choose operation</option>
+            <option value="simplify">Simplify</option>
+            <option value="factor">Factor</option>
+        </select>
+    <input placeholder="Expression" name="text">
+    <input type="submit">
+</form>
+
+
+    <p>Your equation is {{equation}} = {{ result }}</p><br><br><br>
+
+</body>
+<footer>
+    <h5>Created By - Krisztian</h5>
+</footer>
+</html>
